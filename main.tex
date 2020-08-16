@@ -24,7 +24,6 @@
 %% The first command in your LaTeX source must be the \documentclass command.
 % \documentclass[sigconf,authordraft]{acmart}
 
-
 %%%% As of March 2017, [siggraph] is no longer used. Please use sigconf (above) for SIGGRAPH conferences.
 
 %%%% As of May 2020, [sigchi] and [sigchi-a] are no longer used. Please use sigconf (above) for SIGCHI conferences.
@@ -34,6 +33,8 @@
 
 %%%% Proceedings format for conferences using one-column small layout
 \documentclass[acmsmall,authordraft]{acmart}
+
+\input{tex/_preamble}
 
 % NOTE that a single column version is required for submission and peer review. This can be done by changing the \doucmentclass[...]{acmart} in this template to 
 % \documentclass[manuscript,screen]{acmart}
@@ -89,76 +90,38 @@
 %%
 %% The "title" command has an optional parameter,
 %% allowing the author to define a "short title" to be used in page headers.
-\title{The Name of the Title is Hope}
+\title{Our Awesome Data Science Project }
 
-%%
 %% The "author" command and its associated commands are used to define
 %% the authors and their affiliations.
 %% Of note is the shared affiliation of the first two authors, and the
 %% "authornote" and "authornotemark" commands
 %% used to denote shared contribution to the research.
-\author{Ben Trovato}
-\authornote{Both authors contributed equally to this research.}
-\email{trovato@corporation.com}
-\orcid{1234-5678-9012}
-\author{G.K.M. Tobin}
-\authornotemark[1]
-\email{webmaster@marysville-ohio.com}
+
+\author{Lucas Parzianello}
 \affiliation{%
-  \institution{Institute for Clarity in Documentation}
-  \streetaddress{P.O. Box 1212}
-  \city{Dublin}
-  \state{Ohio}
-  \postcode{43017-6221}
-}
+  \institution{University of Notre Dame}
+  % \streetaddress{8600 Datapoint Drive}
+  \city{Notre Dame}
+  \state{Indiana}
+  \postcode{46556}}
+\email{lbarbosa@nd.edu}
 
-\author{Lars Th{\o}rv{\"a}ld}
+\author{Sophia Abraham}
 \affiliation{%
-  \institution{The Th{\o}rv{\"a}ld Group}
-  \streetaddress{1 Th{\o}rv{\"a}ld Circle}
-  \city{Hekla}
-  \country{Iceland}}
-\email{larst@affiliation.org}
+  \institution{University of Notre Dame}
+  \city{Notre Dame}
+  \state{Indiana}
+  \postcode{46556}}
+\email{?@nd.edu}
 
-\author{Valerie B\'eranger}
+\author{Eric Tsai}
 \affiliation{%
-  \institution{Inria Paris-Rocquencourt}
-  \city{Rocquencourt}
-  \country{France}
-}
-
-\author{Aparna Patel}
-\affiliation{%
- \institution{Rajiv Gandhi University}
- \streetaddress{Rono-Hills}
- \city{Doimukh}
- \state{Arunachal Pradesh}
- \country{India}}
-
-\author{Huifen Chan}
-\affiliation{%
-  \institution{Tsinghua University}
-  \streetaddress{30 Shuangqing Rd}
-  \city{Haidian Qu}
-  \state{Beijing Shi}
-  \country{China}}
-
-\author{Charles Palmer}
-\affiliation{%
-  \institution{Palmer Research Laboratories}
-  \streetaddress{8600 Datapoint Drive}
-  \city{San Antonio}
-  \state{Texas}
-  \postcode{78229}}
-\email{cpalmer@prl.com}
-
-\author{John Smith}
-\affiliation{\institution{The Th{\o}rv{\"a}ld Group}}
-\email{jsmith@affiliation.org}
-
-\author{Julius P. Kumquat}
-\affiliation{\institution{The Kumquat Consortium}}
-\email{jpkumquat@consortium.net}
+  \institution{University of Notre Dame}
+  \city{Notre Dame}
+  \state{Indiana}
+  \postcode{46556}}
+\email{?@nd.edu}
 
 %%
 %% By default, the full list of authors will be used in the page
@@ -223,7 +186,7 @@
 %% information and the body of the document, and typically spans the
 %% page.
 \begin{teaserfigure}
-  \includegraphics[width=\textwidth]{sampleteaser}
+  \includegraphics[width=\textwidth]{images/sampleteaser}
   \caption{Seattle Mariners at Spring Training, 2010.}
   \Description{Enjoying the baseball game from the third-base
   seats. Ichiro Suzuki preparing to bat.}
@@ -558,7 +521,7 @@ third-party material, you must clearly identify it as such, as shown
 in the example below.
 \begin{figure}[h]
   \centering
-  \includegraphics[width=\linewidth]{sample-franklin}
+  \includegraphics[width=\linewidth]{images/sample-franklin}
   \caption{1907 Franklin Model D roadster. Photograph by Harris \&
     Ewing, Inc. [Public domain], via Wikimedia
     Commons. (\url{https://goo.gl/VLCRBB}).}
@@ -599,8 +562,8 @@ article DOI, etc.
 The bibliography is included in your source document with these two
 commands, placed just before the \verb|\end{document}| command:
 \begin{verbatim}
-  \bibliographystyle{ACM-Reference-Format}
-  \bibliography{bibfile}
+  \bibliographystyle{bib/ACM-Reference-Format}
+  \bibliography{bib/bibfile}
 \end{verbatim}
 where ``\verb|bibfile|'' is the name, without the ``\verb|.bib|''
 suffix, of the \BibTeX\ file.
@@ -703,8 +666,8 @@ To Robert, for the bagels and explaining CMYK and color spaces.
 %%
 %% The next two lines define the bibliography style to be used, and
 %% the bibliography file.
-\bibliographystyle{ACM-Reference-Format}
-\bibliography{sample-base}
+\bibliographystyle{bib/ACM-Reference-Format}
+\bibliography{bib/sample-base}
 
 %%
 %% If your work has an appendix, this is the place to put it.
