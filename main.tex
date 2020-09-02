@@ -1,5 +1,5 @@
 % PROJECT INSTRUCTIONS PDF:
-%       https://sakailogin.nd.edu/access/content/group/FA20-CSE-40647-CX-01/Logistics/project_instruction-fall20.pdf
+%       https://sakailogin.nd.edu/access/content/group/FA20-CSE-40647-CX-01/Logistics/project_instruction-fa
 
 % ==============
 % FROM SYLLABUS:
@@ -62,21 +62,32 @@
 % \documentclass[acmsmall,authordraft]{acmart}
 \documentclass[sigconf]{acmart}
 
+    \input{tex/_commands}
     \input{tex/0.preamble}
     
     \begin{document}
     
         \input{tex/0.title}
-        \input{tex/1.intro}
-        \input{tex/2.related}
-        \input{tex/3.problem}
-        \input{tex/4.methodology}
-        \input{tex/5.experiments}
-        \input{tex/6.discussion}
-        \input{tex/7.conclusion}
-        \input{tex/8.future}
-        \input{tex/_references}
-        \input{tex/_appendix}
+    
+        % PROPOSAL:
+        \input{tex/1.problem}
+        \input{tex/2.solutions}
+        \input{tex/3.data_sources}
+        \input{tex/4.evaluation}
+        \input{tex/5.timeline}
+        
+        % MILESTONE:
+        % \input{tex/1.intro}
+        % \input{tex/2.related}
+        % \input{tex/3.problem}
+        % \input{tex/4.methodology}
+        % \input{tex/5.experiments}
+        % \input{tex/6.evaluation}
+        % \input{tex/7.results}
+        % \input{tex/8.timeline}
+        
+        % \input{tex/_references}
+        % \input{tex/_appendix}
     
     \end{document}
 \endinput

@@ -1,0 +1,59 @@
+\section{Possible Solutions}
+
+Before getting into similar projects and potential solutions, we list below some of the features commonly found to solve tasks involving audio processing.
+
+\subsection{Audio Features}
+
+From the current literature, we have found the following two lists of handcrafted audio features with potential to aid an automated classifier. They are divided in time and frequency domains:
+
+% interesting list:
+% https://en.wikipedia.org/wiki/Category:Time%E2%80%93frequency_analysis
+
+\subsubsection{Time domain}
+
+\begin{itemize}
+    \item Central Moments (CM)
+    \item Zero Crossing Rate (ZCR)
+    \item Root Mean Square Energy (RSME)
+    \item Tempo
+\end{itemize}
+
+\subsubsection{Frequency domain}
+
+\begin{itemize}
+    \item Daubechies Wavelet Coefficient Histogram \source{Li}
+    \item Mel-Frequency Cepstrum Coefficients (MFCC)
+    \item Chroma Feature
+    \item Spectral Centroid
+    \item Spectral Bandwidth
+    \item Spectral Contrast
+    \item Sprectral Roll-Off
+\end{itemize}
+
+\subsection{Similar Projects}
+
+\subsubsection{Common classification methods}
+
+\todo[inline]{Write about RF, Logistic Regression, SVM, and Gradient Boosting in Bahuleyan's paper}
+In \source{ Music Genre Classification using Machine Learning Techniques }, they explore the application of machine learning (ML) algorithms to identify and classify the genre of a given audio file. The conventional ML models used are Logistic Regression, Random Forests, Gradient Boosting, and Support Vector Machines(SVM).
+
+\begin{itemize}
+    \item Logistic Regression(LR): often used for binary classification tasks. For multi-class classification task, the LR is applied as a one-vs-rest approach.
+    \item Random Forest(RF): a ensemble learner that combines the prediction from a pre-specified number of decision trees.
+    \item Gradient Boosting (XGB):
+    \item Support Vector Machines (SVM):
+\end{itemize}
+
+\subsubsection{Hierarchical Taxonomy}
+
+\todo[inline]{Write about Li + Ogihara's paper}
+
+\subsubsection{CNN}
+
+\todo[inline]{Write about Zhang's "Improved" paper on CNN for music genre classification}
+
+\subsection{Our Method}
+
+\todo[inline]{Write about our solution(s) for this problem. Something along the following:}
+
+The papers mentioned above attempt to solve the challenge of music genre classification, and show that \highlight{[ insights / takeaways about the problem ]}. However, they fail on \highlight{[ whatever our difference is ]}. To help with this challenge, we plan to \highlight{[ a high level description of our solution ]}

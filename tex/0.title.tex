@@ -1,7 +1,9 @@
-%%
-%% The "title" command has an optional parameter,
-%% allowing the author to define a "short title" to be used in page headers.
-\title[Data Science Project]{Our Awesome Data Science Project}
+% \title[Short Title]{Full Title}
+\title[EnGendr -- Music Genre Classification]{EnGendr: an Ensemble Method for Music Genre Classification}
+% I thought of this name + title in a minute, we can still change it.
+
+\setreviewson
+% \setreviewsoff
 
 %% The "author" command and its associated commands are used to define
 %% the authors and their affiliations.
@@ -32,7 +34,7 @@
   \city{Notre Dame}
   \state{Indiana}
   \postcode{46556}}
-\email{?@nd.edu}
+\email{ctsai@nd.edu}
 
 %%
 %% By default, the full list of authors will be used in the page
@@ -40,44 +42,47 @@
 %% other information printed in the page headers. This command allows
 %% the author to define a more concise list
 %% of authors' names for this purpose.
-\renewcommand{\shortauthors}{Parzianello, Abraham, and Tsai.}
+% \renewcommand{\shortauthors}{Parzianello, Abraham, and Tsai.}
+\renewcommand{\shortauthors}{Parzianello and Tsai}
 
-%%
-%% The abstract is a short summary of the work to be presented in the
-%% article.
-\begin{abstract}
-  \lipsum[9]
-\end{abstract}
+% UNCOMMENT:
+% \begin{abstract}
+%   \lipsum[9]
+% \end{abstract}
 
 %% Generate the section below at http://dl.acm.org/ccs.cfm.
-\begin{CCSXML}
-<ccs2012>
-<concept>
-<concept_id>10010147.10010257</concept_id>
-<concept_desc>Computing methodologies~Machine learning</concept_desc>
-<concept_significance>300</concept_significance>
-</concept>
-<concept>
-<concept_id>10010147.10010178.10010224</concept_id>
-<concept_desc>Computing methodologies~Computer vision</concept_desc>
-<concept_significance>500</concept_significance>
-</concept>
-<concept>
-<concept_id>10010147.10010178.10010205</concept_id>
-<concept_desc>Computing methodologies~Search methodologies</concept_desc>
-<concept_significance>300</concept_significance>
-</concept>
-</ccs2012>
-\end{CCSXML}
+% UNCOMMENT:
+% \begin{CCSXML}
+% <ccs2012>
+% <concept>
+% <concept_id>10010147.10010257</concept_id>
+% <concept_desc>Computing methodologies~Machine learning</concept_desc>
+% <concept_significance>300</concept_significance>
+% </concept>
+% <concept>
+% <concept_id>10010147.10010178.10010224</concept_id>
+% <concept_desc>Computing methodologies~Computer vision</concept_desc>
+% <concept_significance>500</concept_significance>
+% </concept>
+% <concept>
+% <concept_id>10010147.10010178.10010205</concept_id>
+% <concept_desc>Computing methodologies~Search methodologies</concept_desc>
+% <concept_significance>300</concept_significance>
+% </concept>
+% </ccs2012>
+% \end{CCSXML}
 
-\ccsdesc[300]{Computing methodologies~Machine learning}
-\ccsdesc[500]{Computing methodologies~Computer vision}
-\ccsdesc[300]{Computing methodologies~Search methodologies}
+% UNCOMMENT:
+% \ccsdesc[300]{Computing methodologies~Machine learning}
+% \ccsdesc[500]{Computing methodologies~Computer vision}
+% \ccsdesc[300]{Computing methodologies~Search methodologies}
 
 %%
 %% Keywords. The author(s) should pick words that accurately describe
 %% the work being presented. Separate the keywords with commas.
-\keywords{COVID-19, machine learning benchmark}
+
+% UNCOMMENT:
+% \keywords{COVID-19, machine learning benchmark}
 
 %% A "teaser" image appears between the author and affiliation
 %% information and the body of the document, and typically spans the
