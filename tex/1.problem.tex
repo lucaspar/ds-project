@@ -1,0 +1,23 @@
+\section{Problem Definition}
+
+In recent years, the increasingly availability of music in several streaming services and personal libraries makes automation a requirement for properly organizing potentially millions of audio tracks. Genre classification is one of the ways we can use to organize such data. In order to automatically categorize the tracks into such categories, we need to first extract audio features from them. This extraction can be hand-crafted (i.e. designed by a specialist) or automated -- in the case of the increasingly popular deep neural networks.
+
+% Keywords / terms worth mentioning:
+% ACR -- https://en.wikipedia.org/wiki/Automatic_content_recognition
+% MIR -- https://en.wikipedia.org/wiki/Music_information_retrieval
+
+% Applications to mention as motivators:
+% \begin{itemize}
+%     \item Streaming services
+%     \item Music Recommendation
+%     \item Automatic library organization
+% \end{itemize}
+
+This work explores both methods of feature extraction. Our main contributions are:
+
+\begin{itemize}
+    \item Answer which features are more determinant when solving the problem of music genre classification.
+    \item Compare the confusion matrices of handcrafted and automated approaches in order to create an ensemble classifier more accurate than its components in isolation.
+\end{itemize}
+
+% note for us - one cool thing to do/add is to train a CNN model and see which parts of the spectrograms are more determinant for each genre with some visualization library.

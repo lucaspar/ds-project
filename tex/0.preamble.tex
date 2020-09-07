@@ -1,5 +1,10 @@
 \usepackage{lipsum}
 
+% Easy Review:
+% http://mirrors.ibiblio.org/CTAN/macros/latex/contrib/easyreview/doc/easyReview.pdf
+\let\comment\undefined
+\usepackage{easyReview}
+
 % NOTE that a single column version is required for submission and peer review. This can be done by changing the \doucmentclass[...]{acmart} in this template to 
 % \documentclass[manuscript,screen]{acmart}
 
@@ -45,3 +50,8 @@
 %% Uncommenting
 %% the next command will enable that style.
 %%\citestyle{acmauthoryear}
+
+% ============
+
+% remove citation after abstract:
+\settopmatter{printacmref=false}
