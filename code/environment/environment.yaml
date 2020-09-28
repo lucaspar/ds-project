@@ -136,4 +136,3 @@ dependencies:
     - resampy==0.2.2
     - soundfile==0.10.3.post1
 prefix: /media/eric/BulkyStorage/installed/anaconda3/envs/dsproject
-
