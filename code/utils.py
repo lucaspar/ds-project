@@ -11,6 +11,7 @@ import os.path
 import ast
 
 
+
 # Number of samples per 30s audio clip.
 # TODO: fix dataset to be constant.
 NB_AUDIO_SAMPLES = 1321967
@@ -212,7 +213,7 @@ def load(filepath):
         try:
             tracks['set', 'subset'] = tracks['set', 'subset'].astype(
                     'category', categories=SUBSETS, ordered=True)
-        except ValueError:
+        except TypeError:
             # the categories and ordered arguments were removed in pandas 0.25
             tracks['set', 'subset'] = tracks['set', 'subset'].astype(
                      pd.CategoricalDtype(categories=SUBSETS, ordered=True))
