@@ -1,21 +1,21 @@
 \section{Data Sources}
 
-From our research, we have found a quite few options of datasets containing music tracks (excerpts or integral) with music genre labels. Some popular alternatives are described below:
-
-\subsection{GTZAN}
-
-GTZAN is one of the most popular public datasets for music genre recognition \cite{Sturm2013} and is composed of a thousand 30-second audio excerpts labeled across 10 music genres. Despite its popularity, the dataset was not created for music genre classification. Moreover, there are many critics about the dataset quality and whether its size is capable of allowing for accurate or significant results \cite{Sturm2013}.
-
-\subsection{SYNAT}
-
-The SYNAT database \cite{10.1007/978-3-642-21916-0_75} stores over 50 thousand 30-second music tracks in MP3 format, across 22 genres: Alternative Rock, Blues, Broadway \& Vocalists, Children’s Music, Christian and Gospel, Classic Rock, Classical, Country, Dance and DJ, Folk, Hard Rock and Metal, International, Jazz, Latin Music, Miscellaneous, New Age, Opera \& Vocal, Pop, Rap and Hip-Hop, Rock, R\&B, and Soundtracks. However, we were unable to find a working download link or request form at the time of writing.
-
-\subsection{MSD}
-
-The Million Song Dataset (MSD) \cite{Bertin-Mahieux2011} is a collection of one million songs for which over 190 thousand tracks have consistent genre annotations. Due to the large size of the dataset (around 300GB), MSD is publicly available for research purposes as an AWS EC2 snapshot, rather than a direct download.
+From our research, we have found a quite few options of datasets containing music tracks (excerpts or integral) with music genre labels, enabling us to perform feature extraction for genre classification. Due to the public availability, ease of access, and good documentation, we have selected the FMA dataset. We also describe some of the alternatives we have considered below.
 
 \subsection{FMA}
 
 The Free Music Archive (FMA) dataset \cite{Defferrard2017} is a publicly available alternative containing over 100 thousand audio tracks with four dataset versions of varying track number, lengths, and genres, ranging from 8 thousand tracks of 30 seconds of 7.2GB in total size; to over 106 thousand untrimmed tracks across 161 genres summing 879GB. The audio tracks are under a Creative Commons license and it appears to be the best documented alternative.
 
-Due to the public availability, ease of access, and good documentation, we are inclined to start experimenting with a subset of the FMA dataset.
+\subsection{Other Datasets}
+
+\subsubsection{GTZAN}
+
+GTZAN is one of the most popular public datasets for music genre recognition \cite{Sturm2013} and is composed of a thousand 30-second audio excerpts labeled across 10 music genres. Despite its popularity, the dataset was not created for music genre classification. Moreover, there are many critics about the dataset quality and whether its size is capable of allowing for accurate or significant results \cite{Sturm2013}.
+
+\subsubsection{SYNAT}
+
+The SYNAT database \cite{10.1007/978-3-642-21916-0_75} stores over 50 thousand 30-second music tracks in MP3 format, across 22 genres: Alternative Rock, Blues, Broadway \& Vocalists, Children’s Music, Christian and Gospel, Classic Rock, Classical, Country, Dance and DJ, Folk, Hard Rock and Metal, International, Jazz, Latin Music, Miscellaneous, New Age, Opera \& Vocal, Pop, Rap and Hip-Hop, Rock, R\&B, and Soundtracks. However, we were unable to find a working URL for download or a request form at the time, which forced us to choose an alternative.
+
+\subsubsection{MSD}
+
+The Million Song Dataset (MSD) \cite{Bertin-Mahieux2011} is a collection of one million songs for which over 190 thousand tracks have consistent genre annotations. Due to the large size of the dataset (around 300GB), MSD is publicly available for research purposes as an AWS EC2 snapshot, rather than a direct download. For our purposes a smaller collection would suffice, but MSD remains an adequate alternative.
