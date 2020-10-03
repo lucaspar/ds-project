@@ -8,7 +8,7 @@ Bad chart labels (FG_A, FG_per?)
 Binning for latitude
 Do they take altitude as a feature?
 
-COnsidered imbalanced data - under / oversampling
+Considered imbalanced data - under / oversampling
 Model level - cost sensitive learning? -
 Feature selection
 Model running - is accuracy on validation set? What's the size?
