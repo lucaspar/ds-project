@@ -2,10 +2,14 @@
 
 \begin{figure*}[ht]
     \includesvg[width=0.8\textwidth]{images/heatmap}
-    \caption{\highlight{CAPTION ME!}}
+    \caption{\highlight{heat map }}
     \label{fig:heatmap_baseline}
 \end{figure*}
 
-\kant[1-10]     % remove me
+% \kant[1-10]     % remove me
 
-As shown in the Figure \ref{fig:heatmap_baseline}, the combinations of the different features with SVC models provide the highest accuracy so far. The numbers will be more accurate if we train them with K-fold methods if we have enough time.
+% As shown in the , the features derived from MFCC combined with SVM classifiers provide the highest accuracy so far. The numbers will be more accurate if we train them with K-fold methods if we have enough time.
+
+% \subsubsection{Analysis}
+
+From the heatmap in Figure \ref{fig:heatmap_baseline}, we have found that the most decisive individual features for genre classification across the classifiers tested are Mel-Frequency Cepstrum Coefficients (MFCC). Followed by the second most decisive feature is Spectral Contrast feature. The last rows of the heatmap combine these two features in sets with spectral contrast, spectral centroid, chroma, tonnetz and ZCR. When combined, we see a slight improvement on some classifiers, but a very similar performance to MFCC + Spectral Contrast overall.

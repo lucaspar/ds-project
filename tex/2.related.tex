@@ -1,28 +1,5 @@
 \section{Related Work}
 
-In the related literature we can find the following common features extracted in order to perform music genre recognition and other audio processing tasks. They can be divided in time and frequency domains:
-
-% interesting list:
-% https://en.wikipedia.org/wiki/Category:Time%E2%80%93frequency_analysis
-
-\subsubsection{Time domain}
-
-\begin{itemize}
-    \item Central Moments (CM)
-    \item Zero Crossing Rate (ZCR) \cite{Li2006}
-    \item Root Mean Square Energy (RSME) \cite{Tao}
-    \item Tempo
-\end{itemize}
-
-\subsubsection{Frequency domain}
-
-\begin{itemize}
-    \item Mel-Frequency Cepstrum Coefficients (MFCC) \cite{Li2006, Nanni2016, Hoffmann2016, Lim2012}
-    \item Spectral Centroid, Bandwidth, Contrast, Roll-Off \cite{Li2006, Li2005}
-    \item Daubechies Wavelet Coefficient Histogram \cite{Li2006}
-    \item Chroma Features
-\end{itemize}
-
 \subsection{Common classification methods}
 
 In \citet{Bahuleyan2018}, they explore the application of machine learning (ML) algorithms to identify and classify the genre of a given audio file. The conventional ML models that are often seen are Gradient Boosting, Random Forests (RF), Logistic Regression (LR), and Support Vector Machines (SVM). This paper mainly compares the performance of two different classes of methods:
@@ -50,6 +27,6 @@ The methodology of their improved CNN is to implement a pile of CNN module, whic
 
 \subsection{Our Method}
 
-The combination between the mentioned features and models allow us to acquire multiple results. On a first moment, we will train a classifier using traditional techniques such as Support Vector Machines, Logistic Regression, and Random Forests \highlight{ to use them as baseline for comparisons with our ensemble version.} In a second moment, we will train neural network using a pre-trained model as our backbone -- at the moment we are considering Inception and VGG, in that order. With both models, we propose an ensemble classifier that takes into account the confusion matrices for each model and applies these values as probabilistic weights for a final genre prediction.
+The combination between the mentioned features and models allow us to acquire multiple results. On a first moment, we will train a set of traditional classifiers such as Support Vector Machines, Logistic Regression, and Random Forests to use them as baseline for comparisons with our ensemble version. In a second moment, we will train neural network using a pre-trained model as our backbone -- at the moment we are considering Inception and VGG, in that order. With both models, we propose an ensemble classifier that takes into account the confusion matrices for each model and applies these values as probabilistic weights for a final genre prediction.
 
 % The papers mentioned above attempt to solve the challenge of music genre classification, and show that \highlight{[ insights / takeaways about the problem ]}. Additionally, \citet{Lidy2005} are very descriptive about their audio preprocessing applied in order to extract rhythm patterns in form of features, which might be helpful for our development. However, they fail on \highlight{[ whatever our difference is ]}. To help with this challenge, we plan to \highlight{[ a high level description of our solution ]}
