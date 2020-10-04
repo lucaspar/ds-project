@@ -1,5 +1,6 @@
-name: dsproject
+name: ds
 channels:
+  - conda-forge
   - defaults
 dependencies:
   - _libgcc_mutex=0.1=conda_forge
@@ -56,19 +57,20 @@ dependencies:
   - idna=2.10=pyh9f0ad1d_0
   - importlib-metadata=1.7.0=py37hc8dfbb8_0
   - importlib_metadata=1.7.0=0
-  - intel-openmp=2020.2=254
-  - ipykernel=5.3.4=py37h5ca1d4c_0
-  - ipython=7.18.1=py37h5ca1d4c_0
-  - ipython_genutils=0.2.0=py37_0
-  - jedi=0.17.2=py37_0
-  - jinja2=2.11.2=py_0
+  - ipykernel=5.3.4=py37h43977f1_0
+  - ipython=7.18.1=py37hc6149b9_0
+  - ipython_genutils=0.2.0=py_1
+  - ipywidgets=7.5.1=pyh9f0ad1d_1
+  - jedi=0.15.2=py37_0
+  - jinja2=2.11.2=pyh9f0ad1d_0
   - joblib=0.16.0=py_0
-  - jpeg=9b=h024ee3a_2
-  - json5=0.9.5=py_0
-  - jsonschema=3.2.0=py37_1
-  - jupyter_client=6.1.6=py_0
-  - jupyter_core=4.6.3=py37_0
-  - jupyterlab=2.2.6=py_0
+  - jpeg=9d=h516909a_0
+  - json5=0.9.4=pyh9f0ad1d_0
+  - jsonschema=3.2.0=py37hc8dfbb8_1
+  - jupyter_client=6.1.7=py_0
+  - jupyter_core=4.6.3=py37hc8dfbb8_1
+  - jupyterlab=2.2.8=py_0
+  - jupyterlab_pygments=0.1.1=pyh9f0ad1d_0
   - jupyterlab_server=1.2.0=py_0
   - keras=2.3.1=py37_0
   - keras-applications=1.0.8=py_1
@@ -124,23 +126,32 @@ dependencies:
   - nbclient=0.5.0=py_0
   - nbconvert=6.0.3=py37hc8dfbb8_0
   - nbformat=5.0.7=py_0
-  - ncurses=6.2=he6710b0_1
-  - notebook=6.1.1=py37_0
-  - numpy=1.19.1=py37hbc911f0_0
-  - numpy-base=1.19.1=py37hfa32c7d_0
-  - olefile=0.46=py37_0
-  - openssl=1.1.1g=h7b6447c_0
-  - packaging=20.4=py_0
-  - pandas=1.1.1=py37he6710b0_0
-  - pandoc=2.10.1=0
-  - pandocfilters=1.4.2=py37_1
-  - parso=0.7.0=py_0
-  - pcre=8.44=he6710b0_0
-  - pexpect=4.8.0=py37_1
-  - pickleshare=0.7.5=py37_1001
-  - pillow=7.2.0=py37hb39fc2d_0
-  - pip=20.2.2=py37_0
-  - prometheus_client=0.8.0=py_0
+  - nbresuse=0.3.6=py_0
+  - ncurses=6.2=he1b5a44_1
+  - nest-asyncio=1.4.0=py_0
+  - nettle=3.4.1=h1bed415_1002
+  - nodejs=14.11.0=h568c755_0
+  - notebook=6.1.4=py37hc8dfbb8_0
+  - numba=0.51.2=py37h9fdb41a_0
+  - numpy=1.19.1=py37h7ea13bd_2
+  - olefile=0.46=py_0
+  - openh264=2.1.1=h8b12597_0
+  - openssl=1.1.1h=h516909a_0
+  - packaging=20.4=pyh9f0ad1d_0
+  - pandas=1.1.2=py37h3340039_0
+  - pandoc=2.10.1=h516909a_0
+  - pandocfilters=1.4.2=py_1
+  - pango=1.42.4=h7062337_4
+  - parso=0.5.2=py_0
+  - patsy=0.5.1=py_0
+  - pcre=8.44=he1b5a44_0
+  - pexpect=4.8.0=py37hc8dfbb8_1
+  - pickleshare=0.7.5=py37hc8dfbb8_1001
+  - pillow=7.2.0=py37h718be6c_1
+  - pip=20.2.3=py_0
+  - pixman=0.38.0=h516909a_1003
+  - pooch=1.2.0=py_0
+  - prometheus_client=0.8.0=pyh9f0ad1d_0
   - prompt-toolkit=3.0.7=py_0
   - protobuf=3.13.0=py37h3340039_0
   - psutil=5.7.2=py37h8f50634_0
@@ -151,11 +162,11 @@ dependencies:
   - pygments=2.7.1=py_0
   - pygpu=0.7.6=py37h03ebfcd_1001
   - pyopenssl=19.1.0=py_1
-  - pyparsing=2.4.7=py_0
-  - pyqt=5.9.2=py37h05f1152_2
-  - pyrsistent=0.16.0=py37h7b6447c_0
-  - pysocks=1.7.1=py37_1
-  - python=3.7.9=h7579374_0
+  - pyparsing=2.4.7=pyh9f0ad1d_0
+  - pyrsistent=0.17.3=py37h8f50634_0
+  - pysocks=1.7.1=py37hc8dfbb8_1
+  - pysoundfile=0.10.2=py_1001
+  - python=3.7.8=h6f2ec95_1_cpython
   - python-dateutil=2.8.1=py_0
   - python-dotenv=0.14.0=pyh9f0ad1d_0
   - python_abi=3.7=1_cp37m
@@ -184,9 +195,10 @@ dependencies:
   - testpath=0.4.4=py_0
   - theano=1.0.5=py37h3340039_0
   - threadpoolctl=2.1.0=pyh5ca1d4c_0
-  - tk=8.6.10=hbc83047_0
-  - tornado=6.0.4=py37h7b6447c_1
-  - traitlets=4.3.3=py37_0
+  - tk=8.6.10=hed695b0_0
+  - tornado=6.0.4=py37h8f50634_1
+  - tqdm=4.49.0=pyh9f0ad1d_0
+  - traitlets=5.0.4=py_0
   - urllib3=1.25.10=py_0
   - wcwidth=0.2.5=pyh9f0ad1d_1
   - webencodings=0.5.1=py_1
@@ -212,16 +224,8 @@ dependencies:
   - yaml=0.2.5=h516909a_0
   - zeromq=4.3.2=he1b5a44_3
   - zipp=3.1.0=py_0
-  - zlib=1.2.11=h7b6447c_3
-  - zstd=1.4.5=h9ceee32_0
+  - zlib=1.2.11=h516909a_1009
+  - zstd=1.4.5=h6597ccf_2
   - pip:
-    - appdirs==1.4.4
-    - audioread==2.1.8
-    - librosa==0.8.0
-    - llvmlite==0.34.0
-    - numba==0.51.2
-    - pooch==1.2.0
-    - python-dotenv==0.14.0
-    - resampy==0.2.2
-    - soundfile==0.10.3.post1
-prefix: /media/eric/BulkyStorage/installed/anaconda3/envs/dsproject
+    - jupyter-lsp==0.9.2
+    - python-graphviz==0.14.1
