@@ -1250,7 +1250,7 @@
   \global\@ACM@journal@bibstripfalse
 }
 \if@ACM@journal\else
-\acmConference[Data Science]{Project Proposal}{September 2020}{University of Notre Dame,
+\acmConference[Data Science]{Project Proposal}{2020}{University of Notre Dame,
 USA}%
 % UNCOMMENT:
 % \acmConference[Conference'17]{ACM Conference}{July 2017}{Washington,
