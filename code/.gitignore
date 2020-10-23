@@ -1,5 +1,5 @@
 .vscode/
-*.pkl
+#*.pkl
 *.bin
 *.csv
 *.joblib
