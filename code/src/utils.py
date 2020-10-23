@@ -11,14 +11,20 @@ import os.path
 import ast
 
 
-
 # Number of samples per 30s audio clip.
 # TODO: fix dataset to be constant.
 NB_AUDIO_SAMPLES = 1321967
 SAMPLING_RATE = 44100
 
-# Load the environment from the .env file.
-dotenv.load_dotenv(dotenv.find_dotenv())
+def loadenv(envfile=None):
+    if envfile is None:
+        dotenv.load_dotenv(dotenv.find_dotenv())
+    else:
+        if not os.path.exists(envfile):
+            print("ERROR: Create this file first: {}".format(envfile))
+        dotenv.load_dotenv(envfile)
+
+loadenv()
 
 
 class FreeMusicArchive:
@@ -314,7 +320,7 @@ def build_sample_loader(audio_dir, Y, loader):
             self.batch_rearmost = sharedctypes.RawValue(ctypes.c_int, -1)
             self.condition = multiprocessing.Condition(lock=self.lock2)
 
-            data = sharedctypes.RawArray(ctypes.c_int, tids.data)
+            data = sharedctypes.RawArray(ctypes.c_int, tids.to_numpy())
             self.tids = np.ctypeslib.as_array(data)
 
             self.batch_size = batch_size
