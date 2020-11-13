@@ -4,5 +4,21 @@
 
 ### Navigating to our source code:
 ```sh
-ds-project/code/src/baseline
+code/src/baseline
+```
+
+## Useful commands
+
+### Windows:
+
+```sh
+conda env export -n dsproject > .\environment\environment.yaml
+conda env update -f .\environment\environment.yaml
+```
+
+### Unix:
+
+```sh
+conda env export -n dsproject > ./environment/environment.yaml
+conda env update -f ./environment/environment.yaml
 ```
