@@ -11,7 +11,8 @@ They train the four conventional ML classifiers mentioned above with these diffe
 
 \subsubsection{Hierarchical Taxonomy}
 
-In \citet{Li2005}, they mainly focus on automatic music genre classification based on hierarchical classification with taxonomies. This paper introduce the concept of taxonomy. The hierarchical taxonomy identifies the connection between different genres and provides valuable sources of information for genre classification. This experiment displays different accuracy based on Flat- and Hierarchical-classification, and the  Hierarchical-classification has a slightly higher performance in both of their testing Dataset A and B.
+In \citet{Li2005}, they mainly focus on automatic music genre classification based on hierarchical classification with taxonomies. This paper introduce the concept of taxonomy. The hierarchical taxonomy identifies the connection between different genres and provides valuable sources of information for genre classification. This experiment displays different accuracy based on Flat- and Hierarchical-classification, and the  Hierarchical-classification has a slightly higher performance in both of their testing datasets A and B.
+
 With this technique, classifiers are able to take care of an easier separable problem and utilize an independently optimized feature set; this leads to improvements in accuracy apart from the gain in training and testing speed. The benefit of applying taxonomy makes the classification errors become more acceptable than in the case of flat classification, which is a type of Divide-and-Conquer approach that makes those errors fall within their level of the hierarchy.
 
 \subsubsection{CNN}
@@ -23,10 +24,4 @@ In \citet{Zhang2016}, they proposed two ways to improve music genre classificati
     \item Method 2: Utilizing "shortcut connections" to bypass one or more hidden layers, a method inspired by residual learning method.
 \end{itemize}
 
-The methodology of their improved CNN is to implement a pile of CNN module, which is used as the feature extractor, for learning mid- and high-level features from the Spectrogram, and followed by a fully connected module, which is utilized as the classifier. CNNs are also used for music genre prediction by \citet{Bahuleyan2018}.
-
-\subsection{Our Method}
-
-The combination between the mentioned features and models allow us to acquire multiple results. On a first moment, we will train a set of traditional classifiers such as Support Vector Machines, Logistic Regression, and Random Forests to use them as baseline for comparisons with two ensemble versions. Ensemble One will have similar type of models or models with high F1 performance. Ensemble Two will have a greater diversity of models as its members. In a second moment, we will train neural network using a pre-trained model as our backbone -- at the moment we are considering Inception and VGG, in that order. With both models, we propose ensemble classifiers that takes into account the confusion matrices for each model and applies these values as probabilistic weights for a final genre prediction.
-
-% The papers mentioned above attempt to solve the challenge of music genre classification, and show that \highlight{[ insights / takeaways about the problem ]}. Additionally, \citet{Lidy2005} are very descriptive about their audio preprocessing applied in order to extract rhythm patterns in form of features, which might be helpful for our development. However, they fail on \highlight{[ whatever our difference is ]}. To help with this challenge, we plan to \highlight{[ a high level description of our solution ]}
+The methodology of their improved CNN is to implement a pile of CNN module, which is used as the feature extractor, for learning mid- and high-level features from the Spectrogram, and followed by a fully connected module, which is utilized as the classifier. CNN's are also used for music genre prediction by \citet{Bahuleyan2018}.
