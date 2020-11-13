@@ -1,0 +1,38 @@
+\section{Experimental Results and Analysis}
+
+ \begin{figure}[th]
+  \centering
+  \includesvg[width=\linewidth]{images/E1_F1_result_barchart.svg}
+  \caption{Ensemble One and its members' F1 performance.}
+    \label{fig:E1_F1_result_barchart}
+\end{figure}
+
+% \kant[1-10]     % remove me
+
+% As shown in the , the features derived from MFCC combined with SVM classifiers provide the highest accuracy so far. The numbers will be more accurate if we train them with K-fold methods if we have enough time.
+
+% \subsubsection{Analysis}
+ By running 5 folds, we get each individual classifier performance and our final ensemble performance with validation data.  After training with our training data, F-1 of Ensemble One has around 56 percent and F-1 of Ensemble Two has around 59 percent. However,  when we test with testing data, we have around 46 percent on F-1 with Ensemble One and Two. When we look at the numbers carefully, both of Ensemble One and Two F-1 performances are mostly better than the individual members' performances. Out of our surprise, we found out that one of the individual model, RBF SVC, has outperformed  our two ensemble versions on both validation and test data.
+ 
+
+
+ \begin{figure}[bh]
+  \centering
+  \includesvg[width=\linewidth]{images/E2_F1_result_barchart.svg}
+  \caption{Ensemble Two and its members' F1 performance.}
+    \label{fig:E1_F1_result_barchart}
+\end{figure}
+
+ \begin{figure}[H]
+  \centering
+  \includesvg[width=\linewidth]{images/CM_Ensemble1-testdata.svg}
+  \caption{Confusion Metrics from Ensemble One with test data.}
+    \label{fig:CM_Ensemble1-testdata}
+\end{figure}
+
+ \begin{figure}[H]
+  \centering
+  \includesvg[width=\linewidth]{images/CM_Ensemble2-testdata.svg}
+  \caption{Confusion Metrics from Ensemble Two with test data.}
+    \label{fig:CM_Ensemble2-testdata}
+\end{figure}
