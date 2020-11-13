@@ -1,17 +1,8 @@
 # Data Science Project
 
-## Useful commands
+## Codes are organized inside our jupyter notebook
 
-### Windows:
-
+### Navigating to our source code:
 ```sh
-conda env export -n dsproject > .\environment\environment.yaml
-conda env update -f .\environment\environment.yaml
-```
-
-### Unix:
-
-```sh
-conda env export -n dsproject > ./environment/environment.yaml
-conda env update -f ./environment/environment.yaml
+ds-project/code/src/baseline
 ```
