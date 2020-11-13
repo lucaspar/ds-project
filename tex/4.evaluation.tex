@@ -1,4 +1,4 @@
-\section{Evaluation}
+\section{Evaluation Metrics Selection}
 % \todo[inline]{perform data analysis for feature correlation}
 
 In order to compare the classification models and fulfill our contributions of (i) which features are most relevant in the handcrafted method, and (ii) build an ensemble model for music genre classification; we plan to extract a list of metrics from our classifiers. Firstly, our dataset will be split into training, validation, and testing sets with disjoint audio tracks and uniform representation across music genres, when possible. Then, once the classifiers models are built, we will extract the metrics below in isolation, and lastly, from our ensemble version.
@@ -11,6 +11,6 @@ Some of the metrics we are considering using are:
     \item Mean accuracy -- for a simplified overall idea of a model's performance;
     \item F1 score -- takes into account precision and recall;
     \item Confusion matrix across genres -- to identify which pairs are most challenging for each model and use this information to improve a collective decision;
-    \item Area under the ROC Curve (AUC) -- to attest for the model's performance independently of thresholding decisions;
+    %\item Area under the ROC Curve (AUC) -- to attest for the model's performance independently of thresholding decisions;
     % Q:how to determine which features are most relevant?
 \end{itemize}

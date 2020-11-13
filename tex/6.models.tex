@@ -1,9 +1,20 @@
 \section{Experiment Settings}
 
-For training purposes, we split the FMA-Small dataset into 8:1:1, respectively training, validation, and testing.
+For training purposes, we split the FMA-Small dataset into 8:1:1, respectively training, validation, and testing. In these sets, as shown in Figure \ref{fig:Tracks per genre}, the tracks are equally distributed in each genres, with 800 and 100 tracks per genre respectively on training and testing set. The exact numbers are 6400:800:800 respectively for training, validation, and testing.
+
+\begin{figure}[b]
+  \centering
+  \includesvg[width=\linewidth]{images/tracks_per_genre.svg}
+  \caption{Tracks per genre.}
+    \label{fig:Tracks per genre}
+\end{figure}
+
 
 \subsection{Models}
 After the feature extraction, we make them as input and send them to 13 models for training process:
+
+
+
 
 \begin{itemize}
     \item Logistic Regression (LR)
