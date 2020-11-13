@@ -1,0 +1,55 @@
+\section{Feature Extraction}
+
+We are currently using the features listed below, extracted with the help of \texttt{librosa} \cite{McFee2015} -- a Python package for music and audio analysis.
+
+\begin{itemize}
+    \item Zero Crossing Rate (ZCR) \cite{Li2006}
+    \item Root Mean Square Energy (RSME) \cite{Tao}
+    \item Mel-Frequency Cepstrum Coefficients (MFCC) \cite{Li2006, Nanni2016, Hoffmann2016, Lim2012}
+    \item Spectral Centroid, Bandwidth, Contrast, Roll-Off \cite{Li2006, Li2005}
+    \item Chroma Features
+    \item Tonal Centroid Features (Tonnetz) \cite{Harte2006}
+\end{itemize}
+
+In addition to those, the features that we have found in the literature but are currently not extracted:
+
+\begin{itemize}
+    \item Daubechies Wavelet Coefficient Histogram \cite{Li2006}
+    \item Central Moments (CM)
+    \item Tempo
+\end{itemize}
+
+\subsection{Feature Overview}
+
+\subsubsection{Zero Crossing Rate}
+
+The zero-crossing rate is the rate at which a signal changes from positive to negative and from negative to positive. This is a key-feature in many audio processing tasks - from speech recognition to music information retrieval.
+
+\subsubsection{Root Mean Square Energy}
+
+The energy of a signal $E_s$ relates to how loud the signal is and it is defined as the total magnitude of the signal. The RMSE is computed from this energy across a sliding window of $N$ frames:
+
+\begin{align*}
+    E_{s}   &=  \sum_{n}^{}{|x(n)|^2} \\
+    RMSE    &= \sqrt{ \frac{1}{N} \sum_n \left| x(n) \right|^2 } \\
+\end{align*}
+
+\subsubsection{Mel-Frequency Cepstrum Coefficients (MFCC)}
+
+We have found MFCC to be one of the most relevant features in our classification. To understand the Mel-Frequency Cepstrum Coefficients, let's first define what Cepstrum means. Starting from a sound wave in the time domain, we can generate its spectrum of frequencies using the Discrete Fourier Transform. Because of the nature of sound waves, it makes more sense to visualize these frequencies in the log scale. Now with the log power spectrum of our original signal in the frequency domain.
+
+By applying the Inverse Fourier Transform on this spectrum, we have the Cepstrum, which can be interpreted as the information about the rate of change in the different spectrum bands. Similar to a “spectrum of spectrum”.
+
+When the spectrum is first transformed using the Mel scale, the resulting information is called the Mel-Frequency Cepstrum or MFC, and its coefficients are called Mel-Frequency Cepstral Coefficients, or MFCC’s. One key advantage of MFCC’s is that they are able to describe the large structures of the spectrum, being able to capture the timbre of the tracks. This makes them a good option for genre classification.
+
+\subsubsection{Spectral Centroid, Bandwidth, Contrast, and Roll-Off}
+
+This set of spectral features help to make sense of different properties related to the track analyzed in the frequency domain. The spectral centroid characterises a spectrum by its center of mass, it is which frequency the spectrum is centered upon. It is defined as the weighted sum of frequency bins using their magnitude as weights. The spectral bandwidth is proportional to the difference of the frequencies at each bin and the spectral centroid. Depending on its hyperparameter p, it can be a weighted standard deviation of frequencies. The spectral contrast measures the difference of the spectral peak and valley for each frequency sub-band. Finally, the spectral roll-off is the frequency, below which a specified percentage of the total spectral energy lies. For example, 85\% of the energy lies below 2500 Hertz.
+
+\subsubsection{Chroma Features}
+
+Chroma features are useful to analyze the pitch of an audio track along time. Chroma features capture harmonic and melodic characteristics of an audio track while being robust to changes in timbre and instrumentation. For example, the same song played on a piano will have a similar chromagram than when performed on a guitar.
+
+\subsubsection{Tonal Centroid Features (Tonnetz)}
+
+The Harmonic Network, also known as Tonnetz, represents pitch relations and it’s used in music theory for centuries. The Tonal Centroid Features used in our classifier is a projection of Chroma Features onto a 6-dimensional basis representing the close harmonic relations of fifths, minor and major thirds, each with a set of 2 coordinates. Chroma Features and Tonnetz help our classifier to see the music as a composition of notes and harmonics rather than a complex merger of frequencies.

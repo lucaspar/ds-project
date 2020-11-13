@@ -1,0 +1,66 @@
+\section{Evaluation}
+
+In order to compare the classification models and fulfill our contributions of (i) which features are most relevant in the handcrafted method, and (ii) build an ensemble model for music genre classification; we plan to extract a list of metrics from our classifiers. Firstly, our dataset will be split into training, validation, and testing sets with disjoint audio tracks and uniform representation across music genres, when possible. Then, once the classifiers models are built, we will extract the metrics below in isolation, and lastly, from our ensemble version.
+
+\subsection{Metrics}
+
+To evaluate our model we use the following metrics:
+
+\begin{itemize}
+    \item Mean accuracy -- for a simplified overall idea of a model's performance;
+    \item F1 score -- takes into account precision and recall;
+    \item Confusion matrix across genres -- to identify which pairs are most challenging for each model and use this information to improve a collective decision;
+    %\item Area under the ROC Curve (AUC) -- to attest for the model's performance independently of thresholding decisions;
+    % Q:how to determine which features are most relevant?
+\end{itemize}
+
+% As shown in the , the features derived from MFCC combined with SVM classifiers provide the highest accuracy so far. The numbers will be more accurate if we train them with K-fold methods if we have enough time.
+
+\subsection{Experiment Setup}
+
+The FMA dataset has tracks with more than one genre labelled, thus, we could attempt a multi-class genre classification. However, since we have a total of only 8 classes in the FMA-Small variant, we preferred to use the most predominant class as our ground-truth instead: we select the database attribute named \texttt{genre-top} as our genre label ground truth. FMA-Small contains 8,000 tracks in 8 different genre categories: Hip-Hop, Pop, Folk, Experimental, Rock, International, Electronic, and Instrumental.
+
+\subsection{Ensemble Performance}
+
+By running 5 folds, we get each individual classifier performance and our final ensemble performance with validation data. After training with our training data, Figure \ref{fig:E1_F1_val_test} Ensemble One has F-1 around 56\%, and in Figure \ref{fig:E2_F1_val_test}, Ensemble Two shows a similar F-1 of 59\%. However, when we test with testing data, we have around 46\% on F-1 with Ensemble One and Two. When we look at the numbers carefully, both of Ensemble One and Two F-1 performances are mostly better than the individual members' performances. Out of our surprise, we found out that one of the individual model, RBF SVC, has outperformed  our two ensemble versions on both validation and test data.
+
+\begin{figure*}
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includesvg[width=\linewidth]{images/E1_F1_result_barchart.svg}
+        \caption{Ensemble One and its members' F1 performance.}
+        \label{fig:E1_F1_val_test}
+    \end{minipage}
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includesvg[width=\linewidth]{images/E2_F1_result_barchart.svg}
+        \caption{Ensemble Two and its members' F1 performance.}
+        \label{fig:E2_F1_val_test}
+    \end{minipage}
+    \par\bigskip
+\end{figure*}
+
+\subsection{Confusion Matrices}
+
+Visually, the two confusion matrices in Figures \ref{fig:CM_E1-test} and \ref{fig:CM_E2-test} are very similar. In both we notice great confusion for Folk music classification, which is more often misclassified as Experimental and International than correctly predicted. Considering the classes have a uniform distribution, we see that for both ensembles, the easiest i.e. most often correctly classified genres are: Hip-Hop, Electronic, and Rock.
+
+There is also a high error rate of Pop songs being classified as Electronic, but not the other way around. This might indicate a tendency of pop songs to have electronic components (at least in this particular dataset), while still being seen as pop. Pop music may be more determined by their wide adoption than by a particular set of instruments, tempos, or melody, as the name suggests. This confusion might be an indicator that the set of extracted features lack a "popularity" metric to confidently label a track as "Pop".
+
+The high imbalance of correct prediction across classes suggests that there is a lower variance of styles in these easier classes in this dataset, while the seemingly higher variance of Folk, Pop, and Experimental might be counteracted by an expanded set of features, perhaps towards the track's origins and receptivity instead of technical analysis, since the other features extracted do not seem to improve the overall performance significantly, as showed in Figure \ref{fig:baseline_f1}. Perhaps features such as geographical location and a popularity score would help in discerning the targeted public and indirectly assisting the genre classification.
+
+\begin{figure*}
+    \centering
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includesvg[width=\textwidth]{images/CM_Ensemble1-testdata.svg}
+        \caption{Confusion Matrix for Ensemble One.}
+        \label{fig:CM_E1-test}
+    \end{minipage}
+    \begin{minipage}{0.48\textwidth}
+        \centering
+        \includesvg[width=\textwidth]{images/CM_Ensemble2-testdata.svg}
+        \caption{Confusion Matrix for Ensemble Two.}
+        \label{fig:CM_E2-test}
+    \end{minipage}
+\end{figure*}

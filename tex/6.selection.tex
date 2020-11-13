@@ -1,0 +1,43 @@
+\section{Feature and Model selection}
+
+\begin{figure*}
+    \centering
+    \vspace{-2em}
+    \begin{minipage}{0.6\textwidth}
+        \includesvg[width=\textwidth]{images/baseline_accuracy}
+        \caption{Models vs. Features Sets and their Accuracy-measures on the validation set [0-100\%].}
+        \label{fig:baseline_accuracy}
+    \end{minipage}
+    \vspace{-2em}
+    \begin{minipage}{0.6\textwidth}
+        \includesvg[width=\textwidth]{images/baseline_f1}
+        \caption{Models vs. Features Sets and their F1-measures on the validation set [0-100\%].}
+        \label{fig:baseline_f1}
+    \end{minipage}
+\end{figure*}
+
+From the heatmap in Figure \ref{fig:baseline_accuracy}, we have found that the most decisive individual feature for genre classification across the classifiers tested is Mel-Frequency Cepstrum Coefficients (MFCC). Followed by the second most decisive feature is Spectral Contrast feature. The last rows of the heatmap combine these two features in sets with Spectral Contrast, Spectral Centroid, Chroma, Tonnetz and ZCR. When combined into feature sets, the experiments show a slight improvement on the accuracy and F1 measure on some classifiers, but a very similar performance to MFCC + Spectral Contrast overall. This performance is ratified by the F1 measure across different sets of features and classification models, shown in Figure \ref{fig:baseline_f1}. Finally, the combination of all features does not indicate a noteworthy improvement on the metrics.
+
+Based on that, we select the \textbf{Mel-Frequency Cepstrum Coefficients} and \textbf{Spectral Contrast} as our fixed feature sets for our ensemble models. For model selection, we form two ensembles creatively named \textit{Ensemble One} and \textit{Ensemble Two}. Ensemble One has the best 5 models ranked by their average F-1 score on 5 folds using cross validation. These happened to be similar models: 4 out of 5 are based on SVM's. Ensemble Two has only three members that are selected to increase the ensemble diversity. We then evaluate these against each other and against their individual components.
+
+\textbf{Ensemble One:}
+
+\begin{itemize}
+    \item SVC RBF kernel
+    \item Logistic Regression
+    \item SVC Polynomial kernel
+    \item Linear SVC 1
+    \item Linear SVC 2
+\end{itemize}
+
+\textbf{Ensemble Two:}
+
+\begin{itemize}
+    \item SVC RBF kernel
+    \item Logistic Regression
+    \item MLP 2
+\end{itemize}
+
+\subsection{Voting Mechanism}
+
+For the ensemble decision, we use a majority voting mechanism. In case of a tie (e.g. 2-2-1 for an ensemble of 5 classifiers), we select the genre picked by the top F-1 classifier on the cross validation analysis.
