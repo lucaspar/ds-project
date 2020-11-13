@@ -1,5 +1,5 @@
 \section{Conclusion}
 
-\todo[inline]{I just type whatever it is in my mind now, this need to be rephrased-Eric}
+\paragraph{Model Selection} With the obtained results, our RBF SVC seems to consistently outperform the other individual methods and be slightly better than both ensemble models created in the validation and testing sets. The usage of an ensemble model with greater diversity such as Ensemble Two did not present any clear advantage, although the choice of an ensemble as opposed to a single classifier might still generalize better for a different dataset. This remains to be verified.
 
-In this case with performance results we have as evidence, we find out that the model, RBF SVC, outperformed our ensemble classifiers and is capable of classifying music genres. However, an ensemble model composed by different classifiers such as our Ensemble Two, composed by SVM, Linear Regression and MLP might still generalize better and outperform RBF SVC on a different dataset.
+\paragraph{Feature Selection} Regarding the choice of features, \textbf{MFCC} and \textbf{Spectral Contrast} presented a clear advantage over other features in most of the classifiers tested, proven to be good predictors for genre. The combination of these two features resulted in an even superior accuracy across all classifiers. Moreover, the addition of the other features extracted did not result in any clear advantage -- the addition of all features even performed worse for most individual classifiers.
